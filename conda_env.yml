@@ -1,10 +1,14 @@
 name: pysnowpark
 channels:
   - https://repo.anaconda.com/pkgs/snowflake
+  - conda-forge
   - nodefaults
 dependencies:
   - python=3.9
   - pip
+  - cmake  # Required for building LightGBM
+  - make  # Make utility for building software
+  - llvm-openmp
   - pip:
     # Snowpark
     - snowflake-snowpark-python[pandas]==1.6.1
